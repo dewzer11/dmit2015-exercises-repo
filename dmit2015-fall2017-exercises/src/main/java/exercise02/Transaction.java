@@ -4,12 +4,17 @@ import java.util.Date;
 
 public class Transaction {
 
-	private Date date = new Date();			//getter/setter
-	private char type;			//getter/setter
-	private double amount;		//getter/setter
-	private double balance;		//getter/setter
-	private String description;	//getter/setter
-	
+	@Override
+	public String toString() {
+		return "\nTransaction [date=" + date + ", type=" + type + ", amount=" + amount + ", balance=" + balance
+				+ ", description=" + description + "]";
+	}
+
+	private Date date = new Date();	// getter/setter
+	private char type;				// getter/setter
+	private double amount;			// getter/setter
+	private double balance;			// getter/setter
+	private String description;		// getter/setter
 	
 	public Date getDate() {
 		return date;
@@ -49,6 +54,5 @@ public class Transaction {
 		this.balance = balance;
 		this.description = description;
 	}
-	
 	
 }
