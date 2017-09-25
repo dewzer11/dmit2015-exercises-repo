@@ -8,10 +8,31 @@
         <h1>JSF DataTable</h1>
 		<h:dataTable value="#{trackController.track}" var="currentTrack">
 			<h:column>
-				<h:outputText value="#{currentTrack.album.name}" />
+				<h:outputText value="#{currentTrack.trackId}" />
 			</h:column>
 			<h:column>
-				<h:outputText value="#{currentAlbum.media.name}" />
+				<h:outputText value="#{currentTrack.name}" />
+			</h:column>
+			<h:column>
+				<h:outputText value="#{currentTrack.album.title}" />
+			</h:column>
+			<h:column>
+				<h:outputText value="#{currentTrack.mediaType.mediaTypeId}" />
+			</h:column>
+			<h:column>
+				<h:outputText value="#{currentTrack.genre.name}" />
+			</h:column>
+			<h:column>
+				<h:outputText value="#{currentTrack.composer}" />
+			</h:column>
+			<h:column>
+				<h:outputText value="#{currentTrack.milliseconds}" />
+			</h:column>
+			<h:column>
+				<h:outputText value="#{currentTrack.bytes}" />
+			</h:column>
+			<h:column>
+				<h:outputText value="#{currentTrack.unitPrice}" />
 			</h:column>
 			
 		</h:dataTable>

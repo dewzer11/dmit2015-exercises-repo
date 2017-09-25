@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    template="/WEB-INF/templates/default.xhtml">
+    <ui:define name="content">
+        <h1>JSF DataTable</h1>
+		<h:dataTable value="#{invoiceController.invoices}" var="currentInvoice">
+			<h:column>
+				<h:outputText value="#{currentInvoice.invoiceId}" />
+			</h:column>
+			<h:column>
+				<h:outputText value="#{currentInvoice.customer.customerId}" />
+			</h:column>
+			<h:column>
+				<h:outputText value="#{currentInvoice.invoiceDate}" />
+			</h:column>
+			<h:column>
+				<h:outputText value="#{currentInvoice.billingAddress}" />
+			</h:column>
+			<h:column>
+				<h:outputText value="#{currentInvoice.billingCity}" />
+			</h:column>
+			<h:column>
+				<h:outputText value="#{currentInvoice.billingState}" />
+			</h:column><h:column>
+				<h:outputText value="#{currentInvoice.billingCountry}" />
+			</h:column><h:column>
+				<h:outputText value="#{currentInvoice.billingPostalCode}" />
+			</h:column>
+			<h:column>
+				<h:outputText value="#{currentInvoice.total}" />
+			</h:column>
+			
+		</h:dataTable>
+        
+    </ui:define>
+</ui:composition>
